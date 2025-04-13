@@ -1,0 +1,31 @@
+URL's:
+  // Ingest document
+1) POST : http://localhost:2222/api/documents/upload
+
+In Postman , SELECT Body ->  form-data -> add
+
+ key         value
+ file       sample.pdf/sample.txt(upload file)
+ author      Ayan
+==============================================================================
+  //filter by author
+2) GET : http://localhost:2222/api/documents/filter?author=Ayan
+
+==============================================================================
+  //serch by any keyword
+3) GET : http://localhost:2222/api/qa/query?question=total
+
+==============================================================================
+  // Filter documents by metadata
+4) GET : http://localhost:2222/api/documents?author=Ayan&sort=uploadDate,desc&page=0&size=5
+
+==============================================================================
+// Basic keyword-based Q&A
+5) GET : http://localhost:2222/api/qa/search?query=to&page=0&size=5
+
+==============================================================================
+  // Get document by ID
+6) GET : http://localhost:2222/api/documents/2
+
+==============================================================================
+7) Swagger API URL : http://localhost:2222/swagger-ui/index.html
